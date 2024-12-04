@@ -403,13 +403,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c03629ddfdff4e1cfaa12417dc968c7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _thrust: 10
-  _rotationSpeed: 0.1
+  _thrust: 30
+  _rotationSpeed: 0.003
   _boostThrustMultiplier: 1
   MaxBoostTime: 0
   _boostRechargeDelay: 0
   _boostRechargeRate: 1
-  _shootSpeed: 10
+  _shootSpeed: 0.05
   _maxShootDelay: 1
   _shootLayer: 9
   _bulletPrefab: {fileID: 4490933663094582438, guid: 3b3592d050b901702a98c22e468f5d88, type: 3}

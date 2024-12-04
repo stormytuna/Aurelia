@@ -1,3 +1,5 @@
+using Helpers;
+using ShipParts.Evasions;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,10 +12,15 @@ public class BoostBar : MonoBehaviour
 	void Awake() {
 		_slider = GetComponent<Slider>();
 
-		ShipController playerShipController = Singleton<GameManager>.instance.Player.GetComponent<ShipController>();
-		_slider.maxValue = playerShipController.MaxBoostTime;
+		Boost boost = Singleton<GameManager>.instance.Player.RecursivelyFindChildWithComponent<Boost>();
+		if (boost == null) {
+			gameObject.SetActive(false);
+			return;
+		}
+		
+		_slider.maxValue = boost.MaxBoostTime;
 
-		playerShipController.OnBoostChanged.AddListener((newBoostTime) => {
+		boost.OnBoostChanged.AddListener((newBoostTime) => {
 			_slider.value = newBoostTime;
 		});
 	}

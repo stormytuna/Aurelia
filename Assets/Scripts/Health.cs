@@ -1,7 +1,9 @@
 using System;
+using ShipController;
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(ShipManager))]
 public class Health : MonoBehaviour
 {
 	[SerializeField] private int _maxHealth;
@@ -10,7 +12,10 @@ public class Health : MonoBehaviour
 	public UnityEvent<int, int> OnDamaged = new();
 
 	void Awake() {
-		_health = _maxHealth;
+		ShipManager shipManager = GetComponent<ShipManager>();
+		shipManager.OnShipDataInitialised.AddListener((shipData) => {
+			_health = _maxHealth = shipData.Health;
+		});
 	}
 
 	public void DealDamage(int damage) {

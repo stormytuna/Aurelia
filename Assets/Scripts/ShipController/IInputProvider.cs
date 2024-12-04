@@ -1,9 +1,12 @@
 using UnityEngine;
 
-public interface IInputProvider
+namespace ShipController
 {
-	Vector2 GetMovementInput();
-	float GetDesiredAngle(float currentAngle);
-	bool GetBoostInput();
-	bool GetShootInput();
+	public interface IInputProvider
+	{
+		Vector2 GetMovementInput();
+		float GetDesiredAngle(float currentAngle);
+		bool GetBoostInput();
+		bool GetShootInput();
+	}
 }
