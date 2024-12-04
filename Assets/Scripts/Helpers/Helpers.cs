@@ -82,7 +82,7 @@ namespace Helpers
 
 			return children;
 		}
-	
+
 		public static T FindChildWithComponent<T>(this GameObject parent) where T : Component {
 			return FindChildWithComponent<T>(parent.transform);
 		}
@@ -100,7 +100,7 @@ namespace Helpers
 		public static T RecursivelyFindChildWithComponent<T>(this GameObject parent) where T : Component {
 			return RecursivelyFindChildWithComponent<T>(parent.transform);
 		}
-	
+
 		public static T RecursivelyFindChildWithComponent<T>(this Transform parent) where T : Component {
 			foreach (Transform child in parent) {
 				if (child.gameObject.TryGetComponent(out T component)) {

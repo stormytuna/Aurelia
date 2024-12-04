@@ -10,6 +10,7 @@ public class ContactDamage : MonoBehaviour
 			return;
 		}
 
+		// TODO: Make ShipStat have a "current value", then modify that
 		health.DealDamage(_damage);
 		if (_killSelfOnContact) {
 			Destroy(gameObject);

@@ -1,5 +1,5 @@
 using Helpers;
-using ShipParts.Evasions;
+using ShipParts.Utilities;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,7 +17,7 @@ public class BoostBar : MonoBehaviour
 			gameObject.SetActive(false);
 			return;
 		}
-		
+
 		_slider.maxValue = boost.MaxBoostTime;
 
 		boost.OnBoostChanged.AddListener((newBoostTime) => {

@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5951050825082479294}
-  - component: {fileID: 4989476399244164436}
   m_Layer: 6
   m_Name: ShipPartsContainer
   m_TagString: Untagged
@@ -36,20 +35,6 @@ Transform:
   - {fileID: 1079508400935392664}
   m_Father: {fileID: 3753530945630361448}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4989476399244164436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6005801801098236544}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d49afaecba6443fda73cfb018638319b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _mass: 1
-  _health: 5
 --- !u!1 &6483018006206729747
 GameObject:
   m_ObjectHideFlags: 0
@@ -376,37 +361,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _thrust: 30
   _rotationSpeed: 0.3
---- !u!1 &7612378066835664308
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7922666749105153476}
-  m_Layer: 6
-  m_Name: ShootingPoint
-  m_TagString: ShootPoint
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7922666749105153476
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7612378066835664308}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.45000002, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3650972230067700037}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8647857073180875441
 GameObject:
   m_ObjectHideFlags: 0
@@ -453,52 +407,65 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mass: 1
   _health: 5
---- !u!1 &8670750728294114446
-GameObject:
+--- !u!1001 &8232516079198855471
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3650972230067700037}
-  - component: {fileID: 8295375941164096547}
-  m_Layer: 6
-  m_Name: ShipWeapon
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3650972230067700037
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8670750728294114446}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 7922666749105153476}
-  m_Father: {fileID: 5951050825082479294}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8295375941164096547
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5951050825082479294}
+    m_Modifications:
+    - target: {fileID: 750821411927934369, guid: 72b17dcc1f117af6a953e39523c265da, type: 3}
+      propertyPath: m_Name
+      value: ShipWeapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653658946405834858, guid: 72b17dcc1f117af6a953e39523c265da, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653658946405834858, guid: 72b17dcc1f117af6a953e39523c265da, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653658946405834858, guid: 72b17dcc1f117af6a953e39523c265da, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653658946405834858, guid: 72b17dcc1f117af6a953e39523c265da, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653658946405834858, guid: 72b17dcc1f117af6a953e39523c265da, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653658946405834858, guid: 72b17dcc1f117af6a953e39523c265da, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653658946405834858, guid: 72b17dcc1f117af6a953e39523c265da, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653658946405834858, guid: 72b17dcc1f117af6a953e39523c265da, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653658946405834858, guid: 72b17dcc1f117af6a953e39523c265da, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653658946405834858, guid: 72b17dcc1f117af6a953e39523c265da, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 72b17dcc1f117af6a953e39523c265da, type: 3}
+--- !u!4 &3650972230067700037 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4653658946405834858, guid: 72b17dcc1f117af6a953e39523c265da, type: 3}
+  m_PrefabInstance: {fileID: 8232516079198855471}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8670750728294114446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c503a64e3ea24932a28bd1850050bded, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _shootSpeed: 0.3
-  _maxShootDelay: 0.8
-  _shootLayer: 7
-  _bulletPrefab: {fileID: 4490933663094582438, guid: 3b3592d050b901702a98c22e468f5d88, type: 3}

@@ -35,7 +35,7 @@ namespace EnemyControllers
 		}
 
 		private IEnumerator MoveToRestingPosition() {
-			start:
+		start:
 
 			yield return new WaitForFixedUpdate();
 
@@ -51,7 +51,7 @@ namespace EnemyControllers
 		}
 
 		private IEnumerator ShootAndSpin() {
-			start:
+		start:
 
 			yield return new WaitForFixedUpdate();
 

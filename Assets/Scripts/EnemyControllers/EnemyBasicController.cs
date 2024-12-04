@@ -28,7 +28,7 @@ namespace EnemyControllers
 		}
 
 		private IEnumerator Behaviour() {
-			start:
+		start:
 
 			yield return new WaitForFixedUpdate();
 

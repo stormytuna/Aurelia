@@ -3,18 +3,18 @@ using ShipController;
 using UnityEngine;
 using UnityEngine.Events;
 
-[RequireComponent(typeof(ShipManager))]
+[RequireComponent(typeof(ShipPartsManager))]
 public class Health : MonoBehaviour
 {
-	[SerializeField] private int _maxHealth;
-	[SerializeField] private int _health;
+	[SerializeField] private float _maxHealth;
+	[SerializeField] private float _health;
 
-	public UnityEvent<int, int> OnDamaged = new();
+	public UnityEvent<float, float> OnDamaged = new();
 
 	void Awake() {
-		ShipManager shipManager = GetComponent<ShipManager>();
-		shipManager.OnShipDataInitialised.AddListener((shipData) => {
-			_health = _maxHealth = shipData.Health;
+		ShipPartsManager shipPartsManager = GetComponent<ShipPartsManager>();
+		shipPartsManager.OnShipDataInitialised.AddListener((shipData) => {
+			_health = _maxHealth = shipData.Health.Value;
 		});
 	}
 

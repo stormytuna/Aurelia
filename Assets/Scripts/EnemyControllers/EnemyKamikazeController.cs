@@ -22,7 +22,7 @@ namespace EnemyControllers
 		}
 
 		private IEnumerator KamikazePlayer() {
-			start:
+		start:
 
 			yield return new WaitForFixedUpdate();
 
